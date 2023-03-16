@@ -8,7 +8,7 @@ This is a demo page for the [Hashbrown]("https://github.com/ormaq/Hashbrown") li
 - run `npm start` to start a live development server and see the website
 
 ### Before committing 
-- run `npm deploy` to deploy on Github Pages
+- run `npm run deploy` to deploy on Github Pages
 ### Troubleshooting
 #### React-scripts not found then running `npm start`
 Solution: run `npm install react-scripts` and then run `npm start` again
