@@ -3,7 +3,7 @@ import "./raster.css";
 function App() {
   return (
     <div>
-      <h1 className="title">Introducing Hashbrown.</h1>
+      <h1 className="title text-3xl font-bold underline text-center">Introducing Hashbrown.</h1>
       <r-grid columns="6">
         <r-cell span="2">
           <p>Hashbrown is a blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.</p>
