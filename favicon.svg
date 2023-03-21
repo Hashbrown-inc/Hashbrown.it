@@ -3,7 +3,7 @@
 <g filter="url(#filter0_i_0_1)">
 <rect x="40" y="53.7264" width="81.0666" height="128.705" rx="15" transform="rotate(-20 40 53.7264)" fill="#FDC841"/>
 </g>
-<ellipse cx="132.625" cy="72" rx="20.625" ry="20" fill="white"/>
+<ellipse cx="132.625" cy="72" rx="20.625" ry="20"/>
 <defs>
 <filter id="filter0_i_0_1" x="44.2217" y="30.2216" width="111.754" height="140.226" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
