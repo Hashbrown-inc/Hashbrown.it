@@ -1,5 +1,6 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="200" height="200"/>
+<rect width="200" height="200" fill="#F5F5F5"/>
+<rect width="200" height="200" fill="white"/>
 <g filter="url(#filter0_i_0_1)">
 <rect x="40" y="53.7264" width="81.0666" height="128.705" rx="15" transform="rotate(-20 40 53.7264)" fill="#FDC841"/>
 </g>
