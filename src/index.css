@@ -1,6 +1,9 @@
 @import url("https://rsms.me/inter/inter.css");
 @import url("https://rsms.me/res/fonts/inter-display.css");
 @import url("https://rsms.me/res/fonts/iaw.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* Preset colors */
