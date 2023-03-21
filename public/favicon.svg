@@ -1,9 +1,8 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="200" height="200"/>
 <g filter="url(#filter0_i_0_1)">
-<rect x="40" y="53.7264" width="81.0666" height="128.705" rx="15" transform="rotate(-20 40 53.7264)" fill="#FDC841"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M54.0955 48.5961C46.3108 51.4295 42.2969 60.0371 45.1304 67.8218L78.8894 160.574C81.7228 168.359 90.3304 172.373 98.115 169.539L146.102 152.073C153.887 149.24 157.9 140.632 155.067 132.848L139.753 90.7734C137.532 91.5668 135.131 92 132.625 92C121.234 92 112 83.0457 112 72C112 63.1937 117.87 55.7167 126.022 53.0469L121.308 40.0954C118.475 32.3107 109.867 28.2969 102.082 31.1303L54.0955 48.5961Z" fill="#FDC841"/>
 </g>
-<ellipse cx="132.625" cy="72" rx="20.625" ry="20" fill="white"/>
 <defs>
 <filter id="filter0_i_0_1" x="44.2217" y="30.2216" width="111.754" height="140.226" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
