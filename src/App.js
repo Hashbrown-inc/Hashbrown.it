@@ -90,7 +90,7 @@ function App() {
 
         <r-cell span="4">
           <p>
-            HashBrown uses a permissioned blockchain to store encrypted key data and access control information. The
+            Hashbrown uses a permissioned blockchain to store encrypted key data and access control information. The
             files are encrypted using the Advanced Encryption Standard (AES) algorithm and are split into smaller parts
             using a sharding algorithm, and each part is stored on a different node in the network. Access to the
             encrypted files is controlled by the key stored on the blockchain, and only authorized parties with the

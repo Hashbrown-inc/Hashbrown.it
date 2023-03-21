@@ -119,18 +119,22 @@ h1 {
 h2 {
   font-size: 1.20rem;
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
+}
+
+p{
+  word-spacing: -0.03em ;
 }
 
 code,
 pre {
   font-family: "JetBrain Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 80%;
+  font-size: 74%;
   margin: 0;
   padding: 0 0.1em;
   font-weight: 400;
   white-space: pre-wrap;
-  line-height: 1.25rem;
+  line-height: 1.0rem;
   background-color: var(--code-bg);
   padding: 2em;
 }
