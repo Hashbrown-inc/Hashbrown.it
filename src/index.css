@@ -1,3 +1,221 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://rsms.me/res/fonts/inter-display.css");
+@import url("https://rsms.me/res/fonts/iaw.css");
+
+:root {
+  /* Preset colors */
+  --background-color: #ffffff;
+  --foreground-color: #050505;
+  --link-color: #056fec;
+  --link-visited-color: #8228f4;
+
+  --bgcolor-level1: rgba(0, 0, 0, 0.1);
+  --fgcolor-level1: rgb(60, 49, 94);
+
+  --code-bg:#F9F9F9;
+  --spacing: 64px;
+
+  font-size: 18px;
+  font-family: var(--font1);
+  font-weight: 450;
+  line-height: 1.4;
+  letter-spacing: 0.005em;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --background-color: color(display-p3 1 1 1);
+    --foreground-color: color(display-p3 0.02 0.02 0.02);
+    --link-color: color(display-p3 0.188 0.429 0.894);
+    --link-visited-color: color(display-p3 0.47 0.183 0.921);
+
+    --bgcolor-level1: color(display-p3 0 0 0 / 0.1);
+    --fgcolor-level1: color(display-p3 0.228 0.194 0.357);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #222222;
+    --foreground-color: #ddd;
+    --link-color: #70cafc;
+    --link-visited-color: #b79eff;
+
+    --bgcolor-level1: rgba(0, 0, 0, 0.3);
+
+    --code-bg: #474747;
+
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+
+  @supports (color: color(display-p3 1 1 1)) {
+    :root {
+      --background-color: color(display-p3 0.133 0.133 0.133);
+      --foreground-color: color(display-p3 0.867 0.867 0.867);
+      --link-color: color(display-p3 0.525 0.784 0.969);
+      --link-visited-color: color(display-p3 0.702 0.623 0.975);
+
+      --bgcolor-level1: color(display-p3 0 0 0 / 0.3);
+    }
+  }
+}
+
+:root {
+  --font1: "InterDisplay";
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    --font1: "InterDisplay var";
+  }
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  padding: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+a[href] {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a[href]:visited {
+  color: var(--link-visited-color);
+}
+a[href]:hover {
+  text-decoration: underline;
+}
+
+a[href] #block {
+  background-color: gray;
+  color: var(--foreground-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.10rem;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: 1.20rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+code,
+pre {
+  font-family: "JetBrain Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 80%;
+  margin: 0;
+  padding: 0 0.1em;
+  font-weight: 400;
+  white-space: pre-wrap;
+  line-height: 1.25rem;
+  background-color: var(--code-bg);
+  padding: 2em;
+}
+
+ul.minimal {
+  list-style: none;
+  padding: 0;
+}
+
+ul.minimal > li {
+  padding-bottom: 0.6rem;
+}
+
+hr {
+  height: 2px;
+  border: none;
+  background: var(--foreground-color);
+  margin: 2rem 0;
+}
+
+#title {
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.02em;
+  margin: 4rem 0;
+}
+
+img {
+  max-width: 100%;
+  margin: 2rem auto;
+  display: block;
+  object-position: center center;
+  object-fit: contain;
+}
+
+img.calc {
+  margin: 0 0 2rem -34px;
+  max-width: 115%;
+}
+
+svg {
+  display: block;
+}
+svg.glyph path,
+svg.glyph rect,
+svg.glyph circle {
+  fill: var(--foreground-color);
+}
+
+#title svg {
+  margin: 10px 0 10px 0;
+}
+
+footer {
+  display: flex;
+}
+footer > a {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+footer > a:hover {
+  text-decoration: underline;
+}
+footer > a > * {
+  margin-right: 0.25rem;
+  flex: 1 0;
+}
+
+/* smol screen/window */
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 20px;
+  }
+  body {
+    padding: 32px;
+    flex-direction: column;
+  }
+  #title svg {
+    zoom: 1.25;
+    margin-top: 48px;
+  }
+  #main {
+    margin-top: 32px;
+  }
+}
