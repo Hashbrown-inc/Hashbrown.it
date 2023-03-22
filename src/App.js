@@ -1,8 +1,12 @@
 import "./index.css";
 import "./raster.css";
-import {AiOutlineArrowRight} from "react-icons/ai";
 
 function App() {
+  const spring = {
+    type: "spring",
+    stiffness: 700,
+    damping: 30,
+  };
   return (
     <div id="main">
       <h1 id="title">Introducing Hashbrown.</h1>
@@ -79,21 +83,17 @@ function App() {
               fill="#6B6B6B"
             />
           </svg>
-          
+
+          <a className="quick-links" href="https://github.com/Hashbrown-inc/Hashbrown-Web">
+            <span>Source Code</span>
+          </a>
+
+          <a className="quick-links sm" href="/playground">
+            <span>Playground</span>
+          </a>
+
         </r-cell>
-        <div className="col-start-3 col-span-2">
-        <button className="bg-grey_bg bg-opacity-20 my-6 p-2 items-center flex group">
-          <div className="h-4 w-4 bg-grey_bg rounded-full mr-2 group-hover:opacity-0 transition-all transform 
-                                group-hover:-translate-x-4 -translate-x-0 duration-500 group-hover:duration-500"></div>
-          <div className="transform group-hover:-translate-x-4 -translate-x-0 duration-500 group-hover:duration-500">Source code</div>
-          <div className="duration-500 group-hover:duration-500 opacity-0 group-hover:opacity-100 transition-all transform group-hover:-translate-x-4 -translate-x-0 ml-1">
-          <AiOutlineArrowRight/>
-          </div>
-          </button>
-          </div>
       </r-grid>
-      
-      
 
       <hr></hr>
 
@@ -111,7 +111,7 @@ function App() {
             correct key can access the files.
           </p>
           <pre>
-{`contract HashbrownAccessControl { 
+  {`contract HashbrownAccessControl { 
 
   mapping(address => bytes32) authorizedParties;
 

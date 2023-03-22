@@ -1,6 +1,7 @@
 @import url("https://rsms.me/inter/inter.css");
 @import url("https://rsms.me/res/fonts/inter-display.css");
 @import url("https://rsms.me/res/fonts/iaw.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -89,21 +90,96 @@ body {
   margin: 0 auto;
 }
 
-a[href] {
+a[href] .link{
   color: var(--link-color);
   text-decoration: none;
 }
-a[href]:visited {
+a[href]:visited .link{
   color: var(--link-visited-color);
 }
-a[href]:hover {
+a[href]:hover .link{
   text-decoration: underline;
 }
 
-a[href] #block {
+a[href] .link #block {
   background-color: gray;
   color: var(--foreground-color);
 }
+
+.quick-links {
+  font-size: inherit;
+  font-weight: 550;
+  width: 180px;
+  padding: 1.0rem 0.75rem;
+  background-color: #D9D9D940;
+  margin-top: 2rem;
+  border-radius: 2px;
+  cursor: pointer;
+  padding-top: 1.25rem;
+  display: inline-block;
+  position: relative;
+  transition: 500ms;
+  z-index: 1;
+  margin-right: 1rem;
+}
+
+.sm {
+  width: 160px;
+}
+
+.quick-links span {
+  position: relative;
+  left: 20px;
+  transition: 500ms;
+}
+
+.quick-links:before {
+  content: url('/public/circleblack.svg');
+  position: relative;
+  opacity: 1;  
+  vertical-align: middle;
+  display: inline-block;
+  text-align: middle;
+  right: -5px;
+  transition: 500ms;
+  z-index: 2;
+}
+
+.quick-links:after {
+  content: '→';
+  font-weight: 700;
+  position: absolute;
+  opacity: 0;  
+  right: -10px;
+  padding-right: 10px;
+  transition: 500ms;
+  z-index: 2;
+}
+
+quick-links:hover {
+  padding-right: 2px;
+  padding-left: 2px;
+  transition: 500ms;
+}
+
+.quick-links:hover span {
+  position: relative;
+  left: -10px;
+  transition: 500ms;
+}
+
+.quick-links:hover:after {
+  opacity: 1;
+  right: 10px;
+  transition: 500ms;
+}
+
+.quick-links:hover:before {
+  opacity: 0;
+  right: 10px;
+  transition: 500ms;
+}
+
 
 h1,
 h2,
@@ -133,7 +209,7 @@ code,
 pre {
   font-family: "JetBrain Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 74%;
-  margin: 0;
+  margin: 2em 0;
   padding: 0 0.1em;
   font-weight: 400;
   white-space: pre-wrap;
