@@ -2,18 +2,13 @@ import "./index.css";
 import "./raster.css";
 
 function App() {
-  const spring = {
-    type: "spring",
-    stiffness: 700,
-    damping: 30,
-  };
   return (
     <div id="main">
       <h1 id="title">Introducing Hashbrown.</h1>
 
-      <r-grid columns="6">
-        <r-cell span="2">
-          <p>
+      <r-grid columns="6" columns-s="2">
+        <r-cell span="2" span-s="2">
+          <p className="pb-4 pr-4">
             Hashbrown is a file encryption protocol that divides and distributes files on the blockchain rather than
             using centralized storage.
           </p>
@@ -97,12 +92,12 @@ function App() {
 
       <hr></hr>
 
-      <r-grid columns="6">
+      <r-grid columns="6" columns-s="2">
         <r-cell span="2">
-          <h2>Security First</h2>
+          <h2 className="pb-4">Security First</h2>
         </r-cell>
 
-        <r-cell span="4">
+        <r-cell span="4" span-s="2">
           <p>
             Hashbrown uses a permissioned blockchain to store encrypted key data and access control information. The
             files are encrypted using the Advanced Encryption Standard (AES) algorithm and are split into smaller parts
@@ -142,11 +137,11 @@ function App() {
 
       <hr></hr>
 
-      <r-grid columns="6">
+      <r-grid columns="6" columns-s="2">
         <r-cell span="2">
-          <h2>How does it work?</h2>
+          <h2 className="pb-4">How does it work?</h2>
         </r-cell>
-        <r-cell span="4">
+        <r-cell span="4" span-s="2">
           <p>Dunno yet.</p>
         </r-cell>
       </r-grid>
