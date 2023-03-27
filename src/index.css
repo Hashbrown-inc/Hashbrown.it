@@ -1,6 +1,7 @@
-@import url("https://rsms.me/inter/inter.css");
-@import url("https://rsms.me/res/fonts/inter-display.css");
-@import url("https://rsms.me/res/fonts/iaw.css");
+
+@import url("/src/font-files/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono');
 
 @tailwind base;
 @tailwind components;
@@ -211,13 +212,15 @@ p{
 
 code,
 pre {
-  font-family: "JetBrain Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 74%;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 75%;
+  word-spacing: -0.05em;
   margin: 2em 0;
   padding: 0 0.1em;
-  font-weight: 400;
+  font-weight: 500;
   white-space: pre-wrap;
-  line-height: 1.0rem;
+  line-height: 1.5rem;
+  border-radius: 2px;
   background-color: var(--code-bg);
   padding: 2em;
 }
@@ -247,7 +250,6 @@ hr {
 
 img {
   max-width: 100%;
-  margin: 2rem auto;
   display: block;
   object-position: center center;
   object-fit: contain;
@@ -290,9 +292,9 @@ footer > a > * {
 }
 
 /* smol screen/window */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   :root {
-    font-size: 14px;
+    font-size: 16px;
   }
   body {
     padding: 32px;

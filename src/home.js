@@ -1,10 +1,10 @@
 import "./index.css";
 import "./raster.css";
+import { Link } from "react-router-dom";
 import diagram from "./diagram.svg";
 
-function App() {
-  return (
-    <div id="main">
+const Home = () => (
+    <div>
       <h1 id="title">Introducing Hashbrown.</h1>
 
       <r-grid columns="6" columns-s="2">
@@ -21,10 +21,11 @@ function App() {
             <span>Source Code</span>
           </a>
 
-          <a className="quick-links sm" href="/playground">
+          <Link to="/signup">
+          <a className="quick-links sm">
             <span>Playground</span>
           </a>
-
+        </Link>
         </r-cell>
       </r-grid>
 
@@ -44,24 +45,29 @@ function App() {
             correct key can access the files.
           </p>
           <pre>
-  {`contract HashbrownAccessControl { 
-  mapping(address => bytes32) authorizedParties;
-  function addAuthorizedParty(address party, bytes32 key) public {
-      require(authorizedParties[msg.sender] != bytes32(0), "Only authorized parties can add new authorized parties.");
-      authorizedParties[party] = key;
-  }
-  function removeAuthorizedParty(address party) public {
-      require(authorizedParties[msg.sender] != bytes32(0), "Only authorized parties can remove authorized parties.");
-      delete authorizedParties[party];
-  }
-  function getKey(address party) public view returns (bytes32) {
-      require(authorizedParties[party] != bytes32(0), "Party is not authorized.");
-      return authorizedParties[party];
-  }
-  modifier onlyAuthorized() {
-      require(authorizedParties[msg.sender] != bytes32(0), "Unauthorized access.");
-      _;
-  }
+            {`contract HashbrownAccessControl { 
+
+mapping(address => bytes32) authorizedParties;
+
+function addAuthorizedParty(address party, bytes32 key) public {
+require(authorizedParties[msg.sender] != bytes32(0), "Only authorized parties can add new authorized parties.");
+authorizedParties[party] = key;
+}
+
+function removeAuthorizedParty(address party) public {
+require(authorizedParties[msg.sender] != bytes32(0), "Only authorized parties can remove authorized parties.");
+delete authorizedParties[party];
+}
+
+function getKey(address party) public view returns (bytes32) {
+require(authorizedParties[party] != bytes32(0), "Party is not authorized.");
+return authorizedParties[party];
+}
+
+modifier onlyAuthorized() {
+require(authorizedParties[msg.sender] != bytes32(0), "Unauthorized access.");
+_;
+}
 }
 `}
           </pre>
@@ -80,6 +86,3 @@ function App() {
       </r-grid>
     </div>
   );
-}
-
-export default App;
