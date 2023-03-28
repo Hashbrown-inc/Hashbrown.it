@@ -1,9 +1,17 @@
-import "./index.css";
-import "./raster.css";
+import "../css/index.css";
+import "../css/raster.css";
 import { Link } from "react-router-dom";
-import diagram from "./diagram.svg";
+import diagram from "../data/diagram.svg";
+import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-const Home = () => (
+
+const Home = () =>{ 
+  const navigate = useNavigate();
+  const navigatePlayground = () => {
+    navigate(`/Playground`);
+  };
+  return (
     <div>
       <h1 id="title">Introducing Hashbrown.</h1>
 
@@ -21,11 +29,9 @@ const Home = () => (
             <span>Source Code</span>
           </a>
 
-          <Link to="/signup">
-          <a className="quick-links sm">
+          <div className="quick-links sm" onClick={() => { navigatePlayground() }}>
             <span>Playground</span>
-          </a>
-        </Link>
+          </div>
         </r-cell>
       </r-grid>
 
@@ -85,4 +91,5 @@ _;
         </r-cell>
       </r-grid>
     </div>
-  );
+  )};
+export default Home;
