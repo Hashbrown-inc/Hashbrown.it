@@ -1,104 +1,16 @@
-
-@import url("/src/font-files/inter.css");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono");
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  /* Preset colors */
-  --background-color: #ffffff;
-  --foreground-color: #050505;
-  --link-color: #056fec;
-  --link-visited-color: #8228f4;
-
-  --bgcolor-level1: rgba(0, 0, 0, 0.1);
-  --fgcolor-level1: rgb(60, 49, 94);
-
-  --code-bg:#F9F9F9;
-  --spacing: 64px;
-
-  font-size: 18px;
-  font-family: var(--font1);
-  font-weight: 450;
-  line-height: 1.4;
-  letter-spacing: 0.005em;
-}
-
-@supports (color: color(display-p3 1 1 1)) {
-  :root {
-    --background-color: color(display-p3 1 1 1);
-    --foreground-color: color(display-p3 0.02 0.02 0.02);
-    --link-color: color(display-p3 0.188 0.429 0.894);
-    --link-visited-color: color(display-p3 0.47 0.183 0.921);
-
-    --bgcolor-level1: color(display-p3 0 0 0 / 0.1);
-    --fgcolor-level1: color(display-p3 0.228 0.194 0.357);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #222222;
-    --foreground-color: #ddd;
-    --link-color: #70cafc;
-    --link-visited-color: #b79eff;
-
-    --bgcolor-level1: rgba(0, 0, 0, 0.3);
-
-    --code-bg: #474747;
-
-    font-weight: 400;
-    letter-spacing: 0.01em;
-  }
-
-  @supports (color: color(display-p3 1 1 1)) {
-    :root {
-      --background-color: color(display-p3 0.133 0.133 0.133);
-      --foreground-color: color(display-p3 0.867 0.867 0.867);
-      --link-color: color(display-p3 0.525 0.784 0.969);
-      --link-visited-color: color(display-p3 0.702 0.623 0.975);
-
-      --bgcolor-level1: color(display-p3 0 0 0 / 0.3);
-    }
-  }
-}
-
-:root {
-  --font1: "InterDisplay";
-}
-@supports (font-variation-settings: normal) {
-  :root {
-    --font1: "InterDisplay var";
-  }
-}
-
 * {
   -webkit-font-smoothing: antialiased;
   font-smooth: always;
 }
 
-body {
-  background-color: var(--background-color);
-  color: var(--foreground-color);
-  padding: var(--spacing);
-  display: flex;
-  flex-direction: column;
-  min-width: 200px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-a[href] .link{
+a[href] .link {
   color: var(--link-color);
   text-decoration: none;
 }
-a[href]:visited .link{
+a[href]:visited .link {
   color: var(--link-visited-color);
 }
-a[href]:hover .link{
+a[href]:hover .link {
   text-decoration: underline;
 }
 
@@ -109,12 +21,12 @@ a[href] .link #block {
 
 /* quick links href */
 
-.quick-links {
+.quicklinks {
   font-size: inherit;
   font-weight: 550;
   width: 180px;
-  padding: 1.0rem 0.75rem;
-  background-color: #D9D9D940;
+  padding: 1rem 0.75rem;
+  background-color: #d9d9d940;
   margin-top: 2rem;
   border-radius: 2px;
   cursor: pointer;
@@ -130,16 +42,16 @@ a[href] .link #block {
   width: 170px;
 }
 
-.quick-links span {
+.quicklinks span {
   position: relative;
   left: 20px;
   transition: 500ms;
 }
 
-.quick-links:before {
-  content: url('/public/circleblack.svg');
+.quicklinks:before {
+  content: url("/public/circleblack.svg");
   position: relative;
-  opacity: 1;  
+  opacity: 1;
   vertical-align: middle;
   display: inline-block;
   text-align: middle;
@@ -148,41 +60,40 @@ a[href] .link #block {
   z-index: 2;
 }
 
-.quick-links:after {
-  content: '→';
+.quicklinks:after {
+  content: "→";
   font-weight: 700;
   position: absolute;
-  opacity: 0;  
+  opacity: 0;
   right: -10px;
   padding-right: 10px;
   transition: 500ms;
   z-index: 2;
 }
 
-quick-links:hover {
+quicklinks:hover {
   padding-right: 2px;
   padding-left: 2px;
   transition: 500ms;
 }
 
-.quick-links:hover span {
+.quicklinks:hover span {
   position: relative;
   left: -10px;
   transition: 500ms;
 }
 
-.quick-links:hover:after {
+.quicklinks:hover:after {
   opacity: 1;
   right: 10px;
   transition: 500ms;
 }
 
-.quick-links:hover:before {
+.quicklinks:hover:before {
   opacity: 0;
   right: 10px;
   transition: 500ms;
 }
-
 
 /* text styles */
 
@@ -196,23 +107,23 @@ h4 {
 }
 
 h1 {
-  font-size: 2.10rem;
+  font-size: 2.1rem;
   letter-spacing: -0.05em;
 }
 
 h2 {
-  font-size: 1.20rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
-p{
-  word-spacing: -0.03em ;
+p {
+  word-spacing: -0.03em;
 }
 
 code,
 pre {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 75%;
   word-spacing: -0.05em;
   margin: 2em 0;
@@ -235,7 +146,7 @@ ul.minimal > li {
 }
 
 hr {
-  height: 2px;
+  height: 1.5px;
   border: none;
   background: var(--foreground-color);
   margin: 2rem 0;
@@ -307,7 +218,8 @@ footer > a > * {
   #main {
     margin-top: 32px;
   }
-  .quick-links, .sm{
+  .quicklinks,
+  .sm {
     width: 100%;
   }
 }

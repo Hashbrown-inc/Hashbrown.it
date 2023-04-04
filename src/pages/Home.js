@@ -1,35 +1,39 @@
-import "../css/index.css";
-import "../css/raster.css";
-import { Link } from "react-router-dom";
-import diagram from "../data/diagram.svg";
-import { NavLink } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import "./base.css";
+import styles from "./Home.module.css";
+import "./raster.css";
+import diagram from "./figures/diagram.svg";
+import mechanism from "./figures/mechanism.svg";
+import { useNavigate } from "react-router-dom";
 
-
-const Home = () =>{ 
+const Home = () => {
   const navigate = useNavigate();
   const navigatePlayground = () => {
     navigate(`/Playground`);
   };
+
   return (
-    <div>
-      <h1 id="title">Introducing Hashbrown.</h1>
+    <div className="Home max-w-3xl mx-auto">
+      <h1 id={styles.title}>Introducing Hashbrown.</h1>
 
       <r-grid columns="6" columns-s="2">
         <r-cell span="2" span-s="2">
           <p className="pb-4 pr-4">
-            Hashbrown is a file encryption protocol that divides and distributes files on the blockchain rather than
-            using centralized storage.
+            Hashbrown is a file encryption protocol that divides and distributes files on centralized servers but rather
+            saving each division's hash on blockchain through a smart contract.
           </p>
         </r-cell>
         <r-cell span="4">
           <img src={diagram} alt="Hashbrown diagram" />
 
-          <a className="quick-links" href="https://github.com/Hashbrown-inc/Hashbrown-Web">
+          <a className={styles.quicklinks} href="https://github.com/Hashbrown-inc/Hashbrown-Web">
             <span>Source Code</span>
           </a>
 
-          <div className="quick-links sm" onClick={() => { navigatePlayground() }}>
+          <div
+            className={`${styles.quicklinks} ${styles.sm}`}
+            onClick={() => {
+              navigatePlayground();
+            }}>
             <span>Playground</span>
           </div>
         </r-cell>
@@ -39,7 +43,28 @@ const Home = () =>{
 
       <r-grid columns="6" columns-s="2">
         <r-cell span="2">
-          <h2 className="pb-4">Security First</h2>
+          <h2 className="pb-4">Mechanism</h2>
+        </r-cell>
+        <r-cell span="4" span-s="2">
+          <p>
+            Hashbrown processes the data by computing the hash of a given file and partitioning it into smaller
+            segments. The objective is to store the file data in a centralized server infrastructure, where each server
+            contains hundreds of buckets to host the file segments, distributed randomly across them.
+          </p>
+          <br></br>
+          <p>
+            The metadata related to the file, such as the hash value of the entire file and the location of the
+            individual segments within the buckets, is stored in a smart contract.
+          </p>
+          <img src={mechanism} alt="Hashbrown mechanism" className="mt-6" />
+        </r-cell>
+      </r-grid>
+
+      <hr></hr>
+
+      <r-grid columns="6" columns-s="2">
+        <r-cell span="2">
+          <h2 className="pb-4">Security & Encryption</h2>
         </r-cell>
 
         <r-cell span="4" span-s="2">
@@ -50,46 +75,41 @@ const Home = () =>{
             encrypted files is controlled by the key stored on the blockchain, and only authorized parties with the
             correct key can access the files.
           </p>
-          <pre>
-            {`contract HashbrownAccessControl { 
+          <pre
+            dangerouslySetInnerHTML={{
+              __html: `const <strong>encryptedParts</strong> = fileParts.map(part => {
+  return <strong>CryptoJS.AES.encrypt</strong>(part.toString('base64'), secretKey).toString();
+});
 
-mapping(address => bytes32) authorizedParties;
+const uploadPromises = encryptedParts.map(async (part, index) => {
+  const serverUrl = serverUrls[index % serverUrls.length];
+  const formData = new FormData();
+  formData.append('file', new Blob([part], { type: 'text/plain' }), \`part-\${index}.txt\`);
 
-function addAuthorizedParty(address party, bytes32 key) public {
-require(authorizedParties[msg.sender] != bytes32(0), "Only authorized parties can add new authorized parties.");
-authorizedParties[party] = key;
-}
-
-function removeAuthorizedParty(address party) public {
-require(authorizedParties[msg.sender] != bytes32(0), "Only authorized parties can remove authorized parties.");
-delete authorizedParties[party];
-}
-
-function getKey(address party) public view returns (bytes32) {
-require(authorizedParties[party] != bytes32(0), "Party is not authorized.");
-return authorizedParties[party];
-}
-
-modifier onlyAuthorized() {
-require(authorizedParties[msg.sender] != bytes32(0), "Unauthorized access.");
-_;
-}
-}
-`}
-          </pre>
+  try {
+    await axios.post(serverUrl, formData, {
+      headers: {
+        'Content-Type': \`multipart/form-data; boundary=\${formData._boundary}\`,
+      },
+    });
+    console.log(\`Uploaded part \${index} to \${serverUrl}\`);
+  } catch (error) {
+    console.error(\`Failed to upload part \${index} to \${serverUrl}: \${error.message}\`);
+  }
+});
+`,
+            }}
+          />
         </r-cell>
       </r-grid>
 
       <hr></hr>
-
-      <r-grid columns="6" columns-s="2">
-        <r-cell span="2">
-          <h2 className="pb-4">How does it work?</h2>
-        </r-cell>
-        <r-cell span="4" span-s="2">
-          <p>Dunno yet.</p>
-        </r-cell>
-      </r-grid>
+      <footer>
+        <p>
+          @<a href="https://github.com/Hashbrown-inc/Hashbrown">Hashbrown inc.</a>
+        </p>
+      </footer>
     </div>
-  )};
+  );
+};
 export default Home;

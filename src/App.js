@@ -1,5 +1,3 @@
-import "./css/index.css";
-import "./css/raster.css";
 import Home from './pages/Home';
 import Playground from './pages/Playground';
 import { Routes, Route} from "react-router-dom";

@@ -1,0 +1,31 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.1rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p {
+  word-spacing: -0.03em;
+}
+
+.title {
+  pointer-events: none;
+  user-select: none;
+  margin: 1rem 0 2rem 0;
+}
+
+
