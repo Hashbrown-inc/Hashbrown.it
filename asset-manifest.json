@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2f9ae872.css",
-    "main.js": "/static/js/main.929b156b.js",
+    "main.css": "/static/css/main.d5d11702.css",
+    "main.js": "/static/js/main.300cd975.js",
     "static/media/Inter.var.woff2?v=3.19": "/static/media/Inter.var.c2fe3cb2b7c746f7966a.woff2",
     "static/media/Inter-italic.var.woff2?v=3.19": "/static/media/Inter-italic.var.30807be7abc48ba8c73c.woff2",
     "static/media/Inter-roman.var.woff2?v=3.19": "/static/media/Inter-roman.var.ba4caefcdf5b36b438db.woff2",
@@ -41,14 +41,15 @@
     "static/media/Inter-Black.woff2?v=3.19": "/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
     "static/media/Inter-Thin.woff2?v=3.19": "/static/media/Inter-Thin.fff2a096db014f6239d4.woff2",
     "static/media/Inter-Regular.woff2?v=3.19": "/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
-    "static/media/diagram.svg": "/static/media/diagram.cc5b2fa1ba7dc172bc69a6d3b6259d37.svg",
+    "static/media/mechanism.svg": "/static/media/mechanism.2c374bf464cabcd280d3cc8832c7a75e.svg",
+    "static/media/diagram.svg": "/static/media/diagram.cef8ec3e220363044a3614ec715f9424.svg",
     "index.html": "/index.html",
-    "static/media/circleblack.svg": "/static/media/circleblack.c0e78c28a0bb513e7231.svg",
-    "main.2f9ae872.css.map": "/static/css/main.2f9ae872.css.map",
-    "main.929b156b.js.map": "/static/js/main.929b156b.js.map"
+    "static/media/circleblack.svg": "/static/media/circleblack.e6f68e58385af50e65ca.svg",
+    "main.d5d11702.css.map": "/static/css/main.d5d11702.css.map",
+    "main.300cd975.js.map": "/static/js/main.300cd975.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f9ae872.css",
-    "static/js/main.929b156b.js"
+    "static/css/main.d5d11702.css",
+    "static/js/main.300cd975.js"
   ]
 }
