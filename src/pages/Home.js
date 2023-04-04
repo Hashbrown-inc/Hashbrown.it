@@ -25,7 +25,7 @@ const Home = () => {
         <r-cell span="4">
           <img src={diagram} alt="Hashbrown diagram" />
 
-          <a className={styles.quicklinks} href="https://github.com/Hashbrown-inc/Hashbrown-Web">
+          <a className={styles.quicklinks} href="https://github.com/Hashbrown-inc/Hashbrown">
             <span>Source Code</span>
           </a>
 
@@ -106,7 +106,7 @@ const uploadPromises = encryptedParts.map(async (part, index) => {
       <hr></hr>
       <footer>
         <p>
-          @<a href="https://github.com/Hashbrown-inc/Hashbrown">Hashbrown inc.</a>
+          @<a href="https://github.com/Hashbrown-inc/">Hashbrown inc.</a>
         </p>
       </footer>
     </div>
