@@ -23,7 +23,7 @@ const Home = () => {
           </p>
         </r-cell>
         <r-cell span="4">
-          <img src={diagram} alt="Hashbrown diagram" />
+          <img draggable="false" src={diagram} alt="Hashbrown diagram" />
 
           <a className={styles.quicklinks} href="https://github.com/Hashbrown-inc/Hashbrown">
             <span>Source Code</span>
@@ -56,7 +56,7 @@ const Home = () => {
             The metadata related to the file, such as the hash value of the entire file and the location of the
             individual segments within the buckets, is stored in a smart contract.
           </p>
-          <img src={mechanism} alt="Hashbrown mechanism" className="mt-6" />
+          <img draggable="false" src={mechanism} alt="Hashbrown mechanism" className="mt-6" />
         </r-cell>
       </r-grid>
 
@@ -77,8 +77,8 @@ const Home = () => {
           </p>
           <pre
             dangerouslySetInnerHTML={{
-              __html: `const <strong>encryptedParts</strong> = fileParts.map(part => {
-  return <strong>CryptoJS.AES.encrypt</strong>(part.toString('base64'), secretKey).toString();
+              __html: `const encryptedParts = fileParts.map(part => {
+  return CryptoJS.AES.encrypt(part.toString('base64'), secretKey).toString();
 });
 
 const uploadPromises = encryptedParts.map(async (part, index) => {
