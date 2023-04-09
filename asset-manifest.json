@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.ce995cf6.css",
-    "main.js": "/static/js/main.920dcbfb.js",
+    "main.js": "/static/js/main.b446e2c1.js",
     "static/media/Inter.var.woff2?v=3.19": "/static/media/Inter.var.c2fe3cb2b7c746f7966a.woff2",
     "static/media/Inter-italic.var.woff2?v=3.19": "/static/media/Inter-italic.var.30807be7abc48ba8c73c.woff2",
     "static/media/Inter-roman.var.woff2?v=3.19": "/static/media/Inter-roman.var.ba4caefcdf5b36b438db.woff2",
-    "static/media/mechanism.svg": "/static/media/mechanism.f49219aedbedc359dc43c4b835eb2f88.svg",
+    "static/media/mechanism.svg": "/static/media/mechanism.5b4e08a9e7f06c1d129cd0fa39970056.svg",
     "static/media/Inter-SemiBoldItalic.woff?v=3.19": "/static/media/Inter-SemiBoldItalic.463bdbfb28abad0fa6df.woff",
     "static/media/Inter-BoldItalic.woff?v=3.19": "/static/media/Inter-BoldItalic.b376885042f6c961a541.woff",
     "static/media/Inter-MediumItalic.woff?v=3.19": "/static/media/Inter-MediumItalic.3d0107dd43d0101274d3.woff",
@@ -46,10 +46,10 @@
     "index.html": "/index.html",
     "static/media/circleblack.svg": "/static/media/circleblack.e6f68e58385af50e65ca.svg",
     "main.ce995cf6.css.map": "/static/css/main.ce995cf6.css.map",
-    "main.920dcbfb.js.map": "/static/js/main.920dcbfb.js.map"
+    "main.b446e2c1.js.map": "/static/js/main.b446e2c1.js.map"
   },
   "entrypoints": [
     "static/css/main.ce995cf6.css",
-    "static/js/main.920dcbfb.js"
+    "static/js/main.b446e2c1.js"
   ]
 }
