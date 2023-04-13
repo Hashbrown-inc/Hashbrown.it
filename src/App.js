@@ -3,8 +3,6 @@ import Playground from "./pages/Playground";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
-
-
   return (
     <Routes>
       {" "}

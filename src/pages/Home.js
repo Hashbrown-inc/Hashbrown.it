@@ -86,24 +86,36 @@ const uploadPromises = encryptedParts.map(async (part, index) => {
   const formData = new FormData();
   formData.append('file', new Blob([part], { type: 'text/plain' }), \`part-\${index}.txt\`);
 
-  try {
-    await axios.post(serverUrl, formData, {
-      headers: {
-        'Content-Type': \`multipart/form-data; boundary=\${formData._boundary}\`,
-      },
-    });
-    console.log(\`Uploaded part \${index} to \${serverUrl}\`);
+try {
+  await axios.post(serverUrl, formData, {
+    headers: {
+      'Content-Type': \`multipart/form-data; boundary=\${formData._boundary}\`,
+    },
+  });
+  console.log(\`Uploaded part \${index} to \${serverUrl}\`);
   } catch (error) {
     console.error(\`Failed to upload part \${index} to \${serverUrl}: \${error.message}\`);
   }
-});
-`,
+});`,
             }}
           />
         </r-cell>
       </r-grid>
 
       <hr></hr>
+
+      {/* <r-grid columns="6" columns-s="2">
+        <r-cell span="2">
+          <h2 className="pb-4">Why Hashbrown?</h2>
+        </r-cell>
+
+        <r-cell span="4" span-s="2">
+          <p>
+          Hashbrown was created as an alternative solution to address the issues. By leveraging distributed ledger and a sharding algorithm for file storage, Hashbrown aims to provide improved data security, reduced risk of data corruption, enhanced data privacy, and improved data retrieval time and efficiency. It also uses AES encryption to ensure that the files are protected and access control and authentication mechanisms to ensure that only authorized parties can access the files.
+          </p>
+        </r-cell>
+      </r-grid> */}
+
       <footer>
         <p>
           @<a href="https://github.com/Hashbrown-inc/">Hashbrown inc.</a>
