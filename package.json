@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://hashbrown.it",
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@svgr/webpack": "^7.0.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -49,4 +50,6 @@
   "overrides": {
     "@svgr/webpack": "$@svgr/webpack"
   }
+
+
 }
